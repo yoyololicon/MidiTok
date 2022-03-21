@@ -283,7 +283,7 @@ class MuMIDI(MIDITokenizer):
 
         # Write MIDI file
         if output_path:
-            Path(output_path).mkdir(parents=True, exist_ok=True)
+            Path(output_path).parent.mkdir(parents=True, exist_ok=True)
             midi.dump(output_path)
         return midi
 
